@@ -1,4 +1,4 @@
-'use client';
+
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '@/lib/firebase';
 import Cookies from 'js-cookie';
