@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
       : formData.tags.split(",").map((tag) => tag.trim().toLowerCase());
 
     const res = await axios.post(
-      "/recipes/add",
+      "/api/recipes/add",
       {
         ...formData,
         ingredients: formattedIngredients,

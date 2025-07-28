@@ -15,7 +15,7 @@ export default function Profile() {
       if (!token) return router.push('/');
 
       try {
-        const res = await axios.get('/profile', {
+        const res = await axios.get('/api/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(res.data);

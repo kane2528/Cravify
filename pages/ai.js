@@ -34,7 +34,7 @@ const AIGenerateRecipe = () => {
         const idToken = await firebaseUser.getIdToken();
 
         try {
-          const res = await axios.get("/ai/chats", {
+          const res = await axios.get("/api/ai/chats", {
             headers: {
               Authorization: `Bearer ${idToken}`,
             },
@@ -68,7 +68,7 @@ const AIGenerateRecipe = () => {
       const idToken = await user.getIdToken();
 
       const res = await axios.post(
-        "/ai/generate",
+        "/api/ai/generate",
         { prompt },
         {
           headers: {
@@ -185,7 +185,7 @@ const AIGenerateRecipe = () => {
                     onClick={async () => {
                       try {
                         const idToken = await user.getIdToken();
-                        await axios.delete(`/ai/chat/${chatToDelete._id}`, {
+                        await axios.delete(`/api/ai/chat/${chatToDelete._id}`, {
                           headers: {
                             Authorization: `Bearer ${idToken}`,
                           },

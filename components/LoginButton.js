@@ -1,4 +1,3 @@
-
 'use client';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '@/lib/firebase';
@@ -25,7 +24,7 @@ export default function LoginButton() {
 
     const token = await user.getIdToken();
 
-    await axios.post('/user', {
+    await axios.post('/api/user', {
       name: user.displayName,
       email: user.email,
       photoUrl: user.photoURL,
@@ -64,19 +63,20 @@ export default function LoginButton() {
 
   // UI
   if (userData) {
-    console.log("Photo URL:", userData.photoUrl);
+    // Compute initials from name
+    const initials = userData?.name
+      ?.split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase()
+      .slice(0, 2);
+
     return (
       <div className="flex bg-red-600 p-1 rounded-2xl items-center gap-2">
         <div className="w-8 h-8 rounded-full bg-gray-500 text-white flex items-center justify-center font-semibold text-sm">
-          {userData?.displayName
-            ?.split(" ")
-            .map((n) => n[0])
-            .join("")
-            .toUpperCase()
-            .slice(0, 2)}
+          {initials}
         </div>
-
-        <span className="text-white font-medium">{userData.displayName}</span>
+        <span className="text-white font-medium">{userData.name}</span>
         <button onClick={handleLogout} className="ml-2 text-white hover:text-black">
           <LogOut size={18} />
         </button>

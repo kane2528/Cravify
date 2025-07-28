@@ -14,7 +14,7 @@ const RecipeDetail = () => {
         if (id) {
             const fetchRecipe = async () => {
                 try {
-                    const res = await api.get(`/recipes/recipes/${id}`);
+                    const res = await api.get(`/api/recipes/recipes/${id}`);
                     setRecipe(res.data);
                 } catch (error) {
                     console.error("Error fetching recipe:", error);

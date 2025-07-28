@@ -18,7 +18,7 @@ export default function Home() {
   const fetchRecipes = async () => {
     try {
       setLoading(true);
-      const res = await api.get('/recipes'); // ✅ Change path if needed
+      const res = await api.get('api/recipes'); // ✅ Change path if needed
       setRecipes(res.data);
     } catch (err) {
       console.error("Error fetching recipes:", err);
