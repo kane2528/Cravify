@@ -43,10 +43,10 @@ export default function NotFound() {
           <div className="mb-12">
             <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed">
               Oops! It looks like this recipe has gone missing from our kitchen. 
-              Don't worry, we have plenty of other delicious dishes waiting for you!
+              Do not worry, we have plenty of other delicious dishes waiting for you!
             </p>
             <p className="text-gray-500">
-              The page you're looking for might have been moved, deleted, or never existed.
+              The page you are looking for might have been moved, deleted, or never existed.
             </p>
           </div>
 

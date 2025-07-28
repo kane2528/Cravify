@@ -172,7 +172,7 @@ const AIGenerateRecipe = () => {
                 <p className="text-gray-700 mb-6">
                   Are you sure you want to delete this chat:
                   <br />
-                  <span className="font-medium text-orange-700">"{chatToDelete.prompt.slice(0, 40)}..."</span>
+                  <span className="font-medium text-orange-700">{chatToDelete.prompt.slice(0, 40)}...</span>
                 </p>
                 <div className="flex justify-end gap-3">
                   <button
