@@ -77,47 +77,7 @@ export default function Home() {
 			</section>
 
 			{/* Search and Categories Section */}
-			<section className="py-12 px-4">
-				<div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl p-8">
-					{/* Search Bar */}
-					<div className="relative max-w-2xl mx-auto mb-8">
-						<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-orange-400 w-5 h-5" />
-						{/* <input
-							type="text"
-							value={searchQuery}
-							onChange={(e) => setSearchQuery(e.target.value)}
-							onKeyDown={(e) => {
-								if (e.key === 'Enter') fetchRecipes();
-							}}
-							placeholder="Search for recipes..."
-							className="w-full pl-12 pr-4 py-4 rounded-full border border-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent text-lg shadow-sm bg-orange-50"
-						/> */}
-
-					</div>
-
-					{/* Category Tags */}
-					<div className="flex flex-wrap justify-center gap-3 mb-12">
-						{categories.map((category, idx) => (
-							<button
-								key={category}
-								onClick={() => {
-									setTags(category === 'All Recipes' ? '' : category);
-									fetchRecipes();
-								}}
-								className={`px-6 py-2 rounded-full font-medium border transition-all duration-200 shadow-sm
-      ${idx === 0
-										? "bg-gradient-to-r from-orange-400 to-blue-400 text-white border-transparent hover:from-orange-500 hover:to-blue-500"
-										: "bg-white border-orange-200 text-orange-600 hover:bg-orange-50 hover:border-blue-400 hover:text-blue-600"
-									}`}
-							>
-								{category}
-							</button>
-						))}
-						
-
-					</div>
-				</div>
-			</section>
+			
 
 			{/* Featured Recipes Section */}
 			<section className="py-12 px-4 bg-gradient-to-br from-white via-orange-50 to-blue-50">
